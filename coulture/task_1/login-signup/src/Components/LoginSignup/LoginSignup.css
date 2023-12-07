@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 200px;
+  background: #fff;
+  font-size: 1rem;
+  padding: 2em;
+  padding-bottom: 30px;
+  border-bottom: 3px solid lightskyblue;
+  height: 45%;
+}
+
+.input {
+  margin: 20px;
+}
+
+.input img {
+  position: absolute;
+  margin: -50px;
+}
