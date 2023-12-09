@@ -1,4 +1,5 @@
 import React from "react";
+import banner1 from "banner1.jpeg";
 
 function billboard() {
   return (
@@ -14,7 +15,12 @@ function billboard() {
           <div className="swiper-wrapper">
             <div
               className="swiper-slide"
-              style="background-image: url('images/banner1.jpg');background-repeat: no-repeat;background-size: cover;background-position: center;"
+              style={{
+                backgroundImage: `url(${banner1})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             >
               <div className="banner-content">
                 <div className="container">
@@ -41,7 +47,12 @@ function billboard() {
             </div>
             <div
               className="swiper-slide"
-              style="background-image: url('images/banner2.jpg');background-repeat: no-repeat;background-size: cover;background-position: center;"
+              style={{
+                backgroundImage: `url(${banner1})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             >
               <div className="banner-content">
                 <div className="container">
