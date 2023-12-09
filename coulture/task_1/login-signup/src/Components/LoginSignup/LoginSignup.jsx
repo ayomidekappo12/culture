@@ -5,7 +5,7 @@ import Password_icon from "../Assets/padlock.png";
 import User_icon from "../Assets/person.png";
 import { useState } from "react";
 
-const LoginSignup = () => {
+function LoginSignup() {
   const [action, setAction] = useState("Sign Up");
 
   return (
@@ -63,6 +63,6 @@ const LoginSignup = () => {
       </div>
     </React.Fragment>
   );
-};
+}
 
 export default LoginSignup;
