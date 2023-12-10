@@ -14,14 +14,13 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        // type: 'asset/resource',
         use: [
           "file-loader",
           {
             loader: "image-webpack-loader",
             options: {
-              bypassOnDebug: true, // webpack@1.x
-              disable: true, // webpack@2.x and newer
+              bypassOnDebug: true,
+              disable: true,
             },
           },
         ],
@@ -35,6 +34,14 @@ module.exports = {
             presets: ["@babel/preset-env", "@babel/preset-react"],
           },
         },
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: ["file-loader"],
+      },
+      {
+        test: /\.(mp4|webm)$/,
+        use: ["file-loader"],
       },
     ],
   },
@@ -51,7 +58,7 @@ module.exports = {
   devtool: "inline-source-map",
   plugins: [
     new HtmlWebpackPlugin({
-      name: "index.html",
+      filename: "index.html",
       inject: false,
       template: "./dist/index.html",
     }),
