@@ -1,5 +1,7 @@
 import React from "react";
 import "./billboard.css";
+import "./swiper 9.3.1.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import banner2 from "../Assets/banner2.jpeg";
 
 function billboard() {
@@ -49,7 +51,6 @@ function billboard() {
                 </div>
               </div>
               <div
-              /** 
                 className="swiper-slide"
                 style={{
                   backgroundImage: `url(${banner2})`,
@@ -57,7 +58,6 @@ function billboard() {
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
-              */
               >
                 <div className="banner-content">
                   <div className="container">

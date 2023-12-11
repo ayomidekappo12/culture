@@ -3,6 +3,7 @@ import Header from "../Header/Header";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Billboard from "../billboard/Billboard";
+import Featured_products from "../products/products";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <div className="heading-section">
           <Header />
           <Billboard />
+          <Featured_products />
         </div>
       </div>
     </React.Fragment>

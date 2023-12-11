@@ -1,5 +1,7 @@
 import React from "react";
 import "./products.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./bootstrap grid.css";
 import product_item1 from "../Assets/product-item1.jpg";
 import product_item2 from "../Assets/product-item2.jpg";
 import product_item3 from "../Assets/product-item3.jpg";
