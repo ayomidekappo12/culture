@@ -1,4 +1,5 @@
 import React from "react";
+import "./l_collection.css";
 
 const l_collection = () => {
   return (

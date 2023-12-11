@@ -1,6 +1,5 @@
 import React from "react";
 import "./Header.css";
-import "./search-popup.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./stellar nav.css";
 import logo from "../Assets/main-logo.png";
