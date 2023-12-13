@@ -4,6 +4,9 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Billboard from "../billboard/Billboard";
 import Featured_products from "../products/products";
+import L_collection from "../L-collection/L-collection";
+import Subscribe from "../Subscribe/Subscribe";
+import BestSelling from "../Best-selling/Best-selling";
 
 function App() {
   return (
@@ -13,6 +16,9 @@ function App() {
           <Header />
           <Billboard />
           <Featured_products />
+          <L_collection />
+          <Subscribe />
+          <BestSelling />
         </div>
       </div>
     </React.Fragment>

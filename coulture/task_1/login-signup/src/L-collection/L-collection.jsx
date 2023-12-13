@@ -1,7 +1,10 @@
 import React from "react";
-import "./l_collection.css";
+import "./L-collection.css";
+import collection_item1 from "../Assets/collection-item1.jpg";
+import collection_item2 from "../Assets/collection-item2.jpg";
+import collection_item3 from "../Assets/collection-item3.jpg";
 
-const l_collection = () => {
+const L_collection = () => {
   return (
     <>
       <section id="App-latest_collection">
@@ -11,7 +14,7 @@ const l_collection = () => {
               <div class="collection-item">
                 <div class="products-thumb">
                   <img
-                    src="images/collection-item1.jpg"
+                    src={collection_item1}
                     alt="collection item"
                     class="large-image image-rounded"
                   />
@@ -35,7 +38,7 @@ const l_collection = () => {
               <div class="collection-item top-item">
                 <div class="products-thumb">
                   <img
-                    src="images/collection-item2.jpg"
+                    src={collection_item2}
                     alt="collection item"
                     class="small-image image-rounded"
                   />
@@ -53,7 +56,7 @@ const l_collection = () => {
               <div class="collection-item bottom-item">
                 <div class="products-thumb">
                   <img
-                    src="images/collection-item3.jpg"
+                    src={collection_item3}
                     alt="collection item"
                     class="small-image image-rounded"
                   />
@@ -76,4 +79,4 @@ const l_collection = () => {
   );
 };
 
-export default l_collection;
+export default L_collection;

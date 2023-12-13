@@ -1,0 +1,40 @@
+/*----- Best selling products Section
+--------------------------------------------------------------*/
+.tab-content {
+  position: relative;
+}
+[data-tab-content] {
+  opacity: 0;
+  visibility: hidden;
+  display: grid;
+  transition: cubic-bezier(0.22, 0.78, 0.71, 1.01);
+  transition-duration: 0.8s;
+}
+.active[data-tab-content] {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.tabs .tab {
+  font-weight: 500;
+  color: var(--dark-grey-color);
+  margin-right: 50px;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+.tabs .tab.active,
+.tabs .tab:hover {
+  color: var(--primary-color);
+}
+
+@media screen and (max-width: 991px) {
+  #selling-products .tabs {
+    flex-wrap: unset;
+    overflow-x: scroll;
+  }
+}
