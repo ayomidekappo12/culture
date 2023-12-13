@@ -6,7 +6,7 @@ const ProductItem = ({ image, title, price }) => (
       {image.map((img, index) => (
         <img
           key={index}
-          src={`./Image/${img.default}`}
+          src={img.default}
           alt={`Selling-products ${index + 1}`}
           className="product-image"
         />
@@ -40,17 +40,17 @@ const ProductItem = ({ image, title, price }) => (
 
 const BestSelling = () => {
   const sellingProductsImages = [
-    { default: "./selling-products1.jpg" },
-    { default: "./Image/selling-products2.jpg" },
-    { default: "./Image/selling-products3.jpg" },
-    { default: "./Image/selling-products4.jpg" },
-    { default: "./Image/selling-products5.jpg" },
-    { default: "./Image/selling-products6.jpg" },
-    { default: "./Image/selling-products7.jpg" },
-    { default: "./Image/selling-products8.jpg" },
-    { default: "./Image/selling-products9.jpg" },
-    { default: "./Image/selling-products10.jpg" },
-    { default: "./Image/selling-products11.jpg" },
+    { default: "../Assets/Image/selling-product.jpg" },
+    { default: "../Assets/Image/selling-products2.jpg" },
+    { default: "../Assets/Image/selling-products3.jpg" },
+    { default: "../Assets/Image/selling-products4.jpg" },
+    { default: "../Assets/Image/selling-products5.jpg" },
+    { default: "../Assets/Image/selling-products6.jpg" },
+    { default: "../Assets/Image/selling-products7.jpg" },
+    { default: "../Assets/Image/selling-products8.jpg" },
+    { default: "../Assets/Image/selling-products9.jpg" },
+    { default: "../Assets/Image/selling-products10.jpg" },
+    { default: "../Assets/Image/selling-products11.jpg" },
 
     // Add more images as needed
   ];
