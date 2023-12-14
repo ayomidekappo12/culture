@@ -1,0 +1,10 @@
+/*----- Shoppify section banner Section
+--------------------------------------------------------------*/
+.shoppify-section-banner img {
+  object-position: top;
+}
+@media screen and (max-width: 1199px) {
+  .shoppify-section-banner img {
+    opacity: 0.3;
+  }
+}

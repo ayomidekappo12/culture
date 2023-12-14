@@ -1,4 +1,5 @@
 import React from "react";
+import "./Best-Selling.css";
 
 const ProductItem = ({ image, title, price }) => (
   <div className="product-item col-lg-3 col-md-6 col-sm-6">
