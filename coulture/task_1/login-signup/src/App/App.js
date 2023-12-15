@@ -13,6 +13,8 @@ import Shoppify from "../Shoppify/Shoppify";
 import Quotation from "../Quotation/Quotation";
 import Latest_blog from "../Latest-blog/Latest-blog";
 import Brand_collection from "../Brand-collection/Brand-collection";
+import Shipping from "../Shipping/Shipping";
+import Footer from "../Footer/Footer";
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
           <Quotation />
           <Latest_blog />
           <Brand_collection />
+          <Shipping />
+          <Footer />
         </div>
       </div>
     </React.Fragment>

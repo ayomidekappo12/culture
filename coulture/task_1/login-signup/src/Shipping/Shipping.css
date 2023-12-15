@@ -1,0 +1,44 @@
+/* Theme Colors */
+:root {
+  --accent-color: #8d8d8d;
+  --dark-color: #191919;
+  --light-color: #fff;
+  --grey-color: #dbdbdb;
+  --light-grey-color: #fafafa;
+  --primary-color: #6995b1;
+  --light-primary-color: #eef1f3;
+}
+
+/* Fonts */
+:root {
+  --body-font: "Inter", sans-serif;
+  --heading-font: "Inter", sans-serif;
+}
+
+/*----- Icon Box Section
+--------------------------------------------------------------*/
+#shipping-information {
+  padding-bottom: 100px;
+}
+#shipping-information .icon-box {
+  display: flex;
+  align-items: baseline;
+  border-right: 1px solid #eaeaea;
+  padding-right: 50px;
+  margin-right: 50px;
+}
+#shipping-information .icon-box:last-child {
+  border-right: none;
+  padding-right: 0;
+  margin-right: 0;
+}
+#shipping-information .icon-box i.icon {
+  font-size: 1.5em;
+  color: var(--primary-color);
+  padding-right: 15px;
+}
+.icon-box h4.block-title {
+  line-height: 1.2;
+  font-weight: 400;
+  margin: 20px 0;
+}
