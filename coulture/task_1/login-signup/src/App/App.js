@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../Header/Header";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./bootstrap grid.css";
 import Billboard from "../billboard/Billboard";
 import Featured_products from "../Products/products";
 import L_collection from "../L-collection/L-collection";
