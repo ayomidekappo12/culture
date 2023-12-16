@@ -6,7 +6,7 @@ function Subscribe() {
   return (
     <>
       <div className="App-subscribe">
-        <section id="subscribe" class="padding-large">
+        <section id="subscribe" className="padding-large">
           <div className="container">
             <div className="row">
               <div className="block-text col-md-6">

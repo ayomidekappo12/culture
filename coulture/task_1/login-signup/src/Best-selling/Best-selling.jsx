@@ -8,7 +8,7 @@ const ProductItem = ({ image, title, price }) => (
         <img
           key={index}
           src={img.default}
-          alt={`Selling-products ${index + 1}`}
+          alt={`books ${index + 1}`}
           className="product-image"
         />
       ))}
@@ -22,7 +22,7 @@ const ProductItem = ({ image, title, price }) => (
           add to cart <i className="icon icon-arrow-io"></i>
         </button>
         <button type="button" className="view-btn tooltip d-flex">
-          <i className="icon icon-screen-full"></i>
+          <i className="icon icon-screen-full" />
           <span className="tooltip-text">Quick view</span>
         </button>
         <button type="button" className="wishlist-btn">
@@ -41,18 +41,17 @@ const ProductItem = ({ image, title, price }) => (
 
 const BestSelling = () => {
   const sellingProductsImages = [
-    { default: "../Assets/Image/selling-product.jpg" },
-    { default: "../Assets/Image/selling-products2.jpg" },
-    { default: "../Assets/Image/selling-products3.jpg" },
-    { default: "../Assets/Image/selling-products4.jpg" },
-    { default: "../Assets/Image/selling-products5.jpg" },
-    { default: "../Assets/Image/selling-products6.jpg" },
-    { default: "../Assets/Image/selling-products7.jpg" },
-    { default: "../Assets/Image/selling-products8.jpg" },
-    { default: "../Assets/Image/selling-products9.jpg" },
-    { default: "../Assets/Image/selling-products10.jpg" },
-    { default: "../Assets/Image/selling-products11.jpg" },
-
+    require("../Assets/Image/selling-product.jpg"),
+    require("../Assets/Image/selling-products2.jpg"),
+    require("../Assets/Image/selling-products3.jpg"),
+    require("../Assets/Image/selling-products4.jpg"),
+    require("../Assets/Image/selling-products5.jpg"),
+    require("../Assets/Image/selling-products6.jpg"),
+    require("../Assets/Image/selling-products7.jpg"),
+    require("../Assets/Image/selling-products8.jpg"),
+    require("../Assets/Image/selling-products9.jpg"),
+    require("../Assets/Image/selling-products10.jpg"),
+    require("../Assets/Image/selling-products11.jpg"),
     // Add more images as needed
   ];
 
@@ -118,7 +117,7 @@ const BestSelling = () => {
   return (
     <div>
       {/* Render tabs and other common layout if needed */}
-      <div className="row d-flex flex-wrap">
+      <div className="grid-container">
         {sellingProducts.map((product, index) => (
           <ProductItem key={index} {...product} />
         ))}

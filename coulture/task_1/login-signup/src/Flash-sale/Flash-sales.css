@@ -15,16 +15,27 @@
   --heading-font: "Inter", sans-serif;
 }
 
-/*----- Sales Offer Section
---------------------------------------------------------------*/
+/*----- Sales Offer Section --------------------------------------------------------------*/
 .product-item .item-price del {
   color: var(--grey-color);
   font-size: 0.6em;
   padding-right: 10px;
 }
+
 #flash-sales {
   position: relative;
 }
+
+#flash-sales .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+#flash-sales .product-item {
+  position: relative;
+}
+
 #flash-sales .product-item .discount {
   font-weight: 500;
   color: var(--light-color);

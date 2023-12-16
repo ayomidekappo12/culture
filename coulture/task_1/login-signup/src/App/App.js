@@ -16,28 +16,31 @@ import Latest_blog from "../Latest-blog/Latest-blog";
 import Brand_collection from "../Brand-collection/Brand-collection";
 import Shipping from "../Shipping/Shipping";
 import Footer from "../Footer/Footer";
+import ErrorBoundary from "../ErrorBoundary";
 
 function App() {
   return (
     <React.Fragment>
-      <div className="App">
-        <div className="heading-section">
-          <Header />
-          <Billboard />
-          <Featured_products />
-          <L_collection />
-          <Subscribe />
-          <BestSelling />
-          <Testimonial />
-          <Flash_sales />
-          <Shoppify />
-          <Quotation />
-          <Latest_blog />
-          <Brand_collection />
-          <Shipping />
-          <Footer />
+      <ErrorBoundary>
+        <div className="App">
+          <div className="heading-section">
+            <Header />
+            <Billboard />
+            <Featured_products />
+            <L_collection />
+            <Subscribe />
+            <BestSelling />
+            <Testimonial />
+            <Flash_sales />
+            <Shoppify />
+            <Quotation />
+            <Latest_blog />
+            <Brand_collection />
+            <Shipping />
+            <Footer />
+          </div>
         </div>
-      </div>
+      </ErrorBoundary>
     </React.Fragment>
   );
 }
