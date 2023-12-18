@@ -1,4 +1,5 @@
-/* Adjusted styles for LoginSignup component */
+/* Common styles for all screen sizes */
+
 .container {
   display: flex;
   flex-direction: column;
@@ -9,6 +10,7 @@
   height: 600px;
   background: #fff;
   padding-bottom: 30px;
+  border-radius: 10px;
 }
 
 .header {
@@ -96,9 +98,50 @@
   font-weight: 700;
   cursor: pointer;
   border-radius: 50px;
+  border: none;
 }
 
 .gray {
   background: #eaeaea;
   color: #676767;
+}
+
+/* Media queries for different screen sizes */
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+  }
+
+  .input {
+    width: 24em;
+    margin: auto;
+  }
+}
+
+/* Tablet screen */
+@media only screen and (min-width: 412px) and (max-width: 932px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input {
+    width: 24em;
+    margin: auto;
+  }
+}
+
+/* Laptop screen */
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  /* Add laptop-specific styles here */
+}
+
+/* Desktop screen */
+@media only screen and (min-width: 1440px) {
+  /* Add desktop-specific styles here */
 }
