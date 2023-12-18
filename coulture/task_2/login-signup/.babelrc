@@ -1,0 +1,4 @@
+// .babelrc or "babel" section in package.json
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"]
+}
