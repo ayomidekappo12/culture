@@ -1,11 +1,14 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HTMLMinimizerPlugin = require("html-minimizer-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
   output: {
     filename: "bundle.js",
   },
-  mode: "development",
+  mode: "production",
   module: {
     rules: [
       {
@@ -20,7 +23,7 @@ module.exports = {
             loader: "image-webpack-loader",
             options: {
               bypassOnDebug: true,
-              disable: true,
+              disable: false,
             },
           },
         ],
@@ -45,6 +48,12 @@ module.exports = {
       },
     ],
   },
+  optimization: {
+    minimizer: [new HTMLMinimizerPlugin(), new CssMinimizerPlugin()],
+    splitChunks: {
+      chunks: "all",
+    },
+  },
   resolve: {
     extensions: ["*", ".js", ".jsx"],
   },
@@ -57,6 +66,7 @@ module.exports = {
   },
   devtool: "inline-source-map",
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       filename: "index.html",
       inject: true,

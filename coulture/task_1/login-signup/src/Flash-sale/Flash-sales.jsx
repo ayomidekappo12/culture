@@ -88,6 +88,27 @@ function Flash_sales() {
       price: 35.0,
       prevPrice: 45.0,
     },
+    {
+      image: require("../Assets/Image/selling-products14.jpg").default,
+      discount: "10% Off",
+      title: "Full sleeve cover shirt",
+      price: 35.0,
+      prevPrice: 45.0,
+    },
+    {
+      image: require("../Assets/Image/selling-products20.jpg").default,
+      discount: "10% Off",
+      title: "Full sleeve cover shirt",
+      price: 35.0,
+      prevPrice: 45.0,
+    },
+    {
+      image: require("../Assets/Image/selling-products18.jpg").default,
+      discount: "10% Off",
+      title: "Full sleeve cover shirt",
+      price: 35.0,
+      prevPrice: 45.0,
+    },
     // Add more products as needed
   ];
 

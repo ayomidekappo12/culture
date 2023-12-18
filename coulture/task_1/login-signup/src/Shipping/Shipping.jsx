@@ -6,7 +6,7 @@ function Shipping() {
     <>
       <div className="App-shipping">
         <section id="shipping-information">
-          <hr />
+          <hr style={{ border: "1px solid black", fontWeight: "bold" }} />
           <div className="container">
             <div className="row d-flex flex-wrap align-items-center justify-content-between">
               <div className="col-md-3 col-sm-6">
@@ -43,7 +43,7 @@ function Shipping() {
               </div>
             </div>
           </div>
-          <hr />
+          <hr style={{ border: "1px solid black", fontWeight: "bold" }} />
         </section>
       </div>
     </>

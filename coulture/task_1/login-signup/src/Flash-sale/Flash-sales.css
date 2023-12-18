@@ -26,6 +26,11 @@
   position: relative;
 }
 
+#flash-sales .section-title {
+  font-weight: 800;
+  font-size: 50px;
+}
+
 #flash-sales .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

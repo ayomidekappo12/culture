@@ -17,6 +17,15 @@
 
 /*----- Latest Blog Section
 --------------------------------------------------------------*/
+#latest-blog {
+  margin: 100px;
+}
+
+#latest-blog .section-title {
+  font-weight: 800;
+  font-size: 50px;
+}
+
 #latest-blog article.post-item,
 #latest-blog .image-holder {
   margin-bottom: 30px;

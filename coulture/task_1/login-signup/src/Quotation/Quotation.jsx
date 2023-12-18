@@ -1,5 +1,6 @@
 import React from "react";
 import "./Quotation.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function Quotation() {
   return (

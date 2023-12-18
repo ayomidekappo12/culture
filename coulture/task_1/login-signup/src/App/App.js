@@ -3,7 +3,7 @@ import Header from "../Header/Header";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./bootstrap grid.css";
-import Billboard from "../billboard/Billboard";
+import Billboard from "../Billboard/Billboard";
 import Featured_products from "../Products/products";
 import L_collection from "../L-collection/L-collection";
 import Subscribe from "../Subscribe/Subscribe";
@@ -17,6 +17,7 @@ import Brand_collection from "../Brand-collection/Brand-collection";
 import Shipping from "../Shipping/Shipping";
 import Footer from "../Footer/Footer";
 import ErrorBoundary from "../ErrorBoundary";
+import Footer_bottom from "../Footer-bottom/Footer-bottom";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             <Brand_collection />
             <Shipping />
             <Footer />
+            <Footer_bottom />
           </div>
         </div>
       </ErrorBoundary>

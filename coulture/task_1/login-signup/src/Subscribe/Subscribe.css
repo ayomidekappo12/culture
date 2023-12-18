@@ -16,8 +16,10 @@
 
 /*----- Subscribe Section
 --------------------------------------------------------------*/
+
 #subscribe .block-text {
   width: 50%;
+  margin-top: 5em;
 }
 #subscribe p {
   font-size: 1em;

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Instagram.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function Instagram() {
   return (

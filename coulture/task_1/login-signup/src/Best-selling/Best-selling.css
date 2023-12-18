@@ -15,6 +15,16 @@
 }
 
 /*----- Best selling products Section --------------------------------------------------------------*/
+#selling-products .section-title {
+  padding: 10px; /* Adjust as needed */
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+#selling-products .tabs.list-unstyled {
+  padding: 10px; /* Adjust as needed */
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
 [data-tab-content] {
   opacity: 0;
   visibility: hidden;
@@ -22,7 +32,8 @@
   transition: cubic-bezier(0.22, 0.78, 0.71, 1.01);
   transition-duration: 0.8s;
 }
-.tab-content .grid-container {
+
+#selling-products .tab-content .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
@@ -35,13 +46,13 @@
   height: auto;
 }
 
-.tabs {
+#selling-products .tabs {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 40px;
 }
 
-.tabs .tab {
+#selling-products .tabs .tab {
   font-weight: 500;
   color: var(--dark-grey-color);
   margin-right: 50px;
@@ -49,8 +60,10 @@
   transition: 0.2s all;
 }
 
-.tabs .tab.active,
-.tabs .tab:hover {
+#selling-products .section-title,
+#selling-products .tabs.list-unstyled,
+#selling-products .tabs .tab.active,
+#selling-products .tabs .tab:hover {
   color: var(--primary-color);
 }
 

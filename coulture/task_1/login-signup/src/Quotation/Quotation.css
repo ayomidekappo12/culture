@@ -1,5 +1,9 @@
 /*----- Quotation Section
 --------------------------------------------------------------*/
+#quotation {
+  margin: 80px;
+}
+
 #quotation blockquote {
   width: 50%;
   margin: 0 auto;

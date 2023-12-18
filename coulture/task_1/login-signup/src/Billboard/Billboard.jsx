@@ -1,6 +1,6 @@
 import React from "react";
-import "./billboard.css";
-import "./swiper 9.3.1.css";
+import "./Billboard.css";
+import "./swiper-9.3.1.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import banner2 from "../Assets/banner2.jpeg";
 

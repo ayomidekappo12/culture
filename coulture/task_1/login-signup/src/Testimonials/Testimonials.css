@@ -22,6 +22,7 @@
 }
 #testimonials .reviews-content {
   position: relative;
+  margin-top: 100px;
 }
 .review-icon i.icon.icon-right-quote {
   font-size: 9em;

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Latest-blog.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import post_img1 from "../Assets/post-img1.jpg";
 import post_img2 from "../Assets/post-img2.jpg";
 import post_img3 from "../Assets/post-img3.jpg";

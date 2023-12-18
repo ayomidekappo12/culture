@@ -17,6 +17,11 @@
 
 /*----- Footer Section
 --------------------------------------------------------------*/
+#footer .widget-title {
+  font-weight: 800;
+  font-size: large;
+}
+
 #footer .footer-menu {
   margin-right: 50px;
 }

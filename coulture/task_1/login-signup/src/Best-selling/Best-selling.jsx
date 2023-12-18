@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./Best-Selling.css";
 
 const ProductItem = ({ image, title, price }) => (
@@ -40,6 +41,12 @@ const ProductItem = ({ image, title, price }) => (
 );
 
 const BestSelling = () => {
+  const [activeTab, setActiveTab] = useState("all"); // Default active tab
+
+  const handleTabClick = (tabId) => {
+    setActiveTab(tabId);
+  };
+
   const sellingProductsImages = [
     require("../Assets/Image/selling-product.jpg"),
     require("../Assets/Image/selling-products2.jpg"),
@@ -52,6 +59,7 @@ const BestSelling = () => {
     require("../Assets/Image/selling-products9.jpg"),
     require("../Assets/Image/selling-products10.jpg"),
     require("../Assets/Image/selling-products11.jpg"),
+    require("../Assets/Image/selling-products12.jpg"),
     // Add more images as needed
   ];
 
@@ -111,18 +119,155 @@ const BestSelling = () => {
       price: "$30.00",
       image: [sellingProductsImages[10]],
     },
+    {
+      title: "Stylish Suit",
+      price: "$30.00",
+      image: [sellingProductsImages[11]],
+    },
     // Add more products as needed
   ];
 
+  const renderProductsByCategory = (category) => {
+    return sellingProducts
+      .filter((product) => category === "all" || product.category === category)
+      .map((product, index) => <ProductItem key={index} {...product} />);
+  };
+
   return (
-    <div>
-      {/* Render tabs and other common layout if needed */}
-      <div className="grid-container">
-        {sellingProducts.map((product, index) => (
-          <ProductItem key={index} {...product} />
-        ))}
+    <>
+      <div id="best-selling-component">
+        <div id="selling-products" className="section-header">
+          <h2
+            className="section-title"
+            style={{
+              padding: "20px",
+              margin: "20px",
+              fontSize: "50px",
+              fontWeight: "800",
+            }}
+          >
+            Best selling products
+          </h2>
+
+          <ul
+            className="tabs list-unstyled"
+            style={{
+              padding: "20px",
+              margin: "20px",
+            }}
+          >
+            <li
+              onClick={() => handleTabClick("all")}
+              className={`tab ${activeTab === "all" ? "active" : ""}`}
+              style={{
+                color: "#8d8d8d",
+                cursor: "pointer",
+                transition: "0.2s all",
+              }}
+              onMouseOver={(e) => (e.currentTarget.style.color = "#6995b1")}
+              onMouseOut={(e) => (e.currentTarget.style.color = "#8d8d8d")}
+            >
+              All
+            </li>
+            <li
+              onClick={() => handleTabClick("shoes")}
+              className={`tab ${activeTab === "shoes" ? "active" : ""}`}
+              style={{
+                color: "#8d8d8d",
+                cursor: "pointer",
+                transition: "0.2s all",
+              }}
+              onMouseOver={(e) => (e.currentTarget.style.color = "#6995b1")}
+              onMouseOut={(e) => (e.currentTarget.style.color = "#8d8d8d")}
+            >
+              Shoes
+            </li>
+            <li
+              onClick={() => handleTabClick("tshirts")}
+              className={`tab ${activeTab === "tshirts" ? "active" : ""}`}
+              style={{
+                color: "#8d8d8d",
+                cursor: "pointer",
+                transition: "0.2s all",
+              }}
+              onMouseOver={(e) => (e.currentTarget.style.color = "#6995b1")}
+              onMouseOut={(e) => (e.currentTarget.style.color = "#8d8d8d")}
+            >
+              Tshirts
+            </li>
+            <li
+              onClick={() => handleTabClick("pants")}
+              className={`tab ${activeTab === "pants" ? "active" : ""}`}
+              style={{
+                color: "#8d8d8d",
+                cursor: "pointer",
+                transition: "0.2s all",
+              }}
+              onMouseOver={(e) => (e.currentTarget.style.color = "#6995b1")}
+              onMouseOut={(e) => (e.currentTarget.style.color = "#8d8d8d")}
+            >
+              Pants
+            </li>
+            <li
+              onClick={() => handleTabClick("hoodie")}
+              className={`tab ${activeTab === "hoodie" ? "active" : ""}`}
+              style={{
+                color: "#8d8d8d",
+                cursor: "pointer",
+                transition: "0.2s all",
+              }}
+              onMouseOver={(e) => (e.currentTarget.style.color = "#6995b1")}
+              onMouseOut={(e) => (e.currentTarget.style.color = "#8d8d8d")}
+            >
+              Hoodie
+            </li>
+            <li
+              onClick={() => handleTabClick("outer")}
+              className={`tab ${activeTab === "outer" ? "active" : ""}`}
+              style={{
+                color: "#8d8d8d",
+                cursor: "pointer",
+                transition: "0.2s all",
+              }}
+              onMouseOver={(e) => (e.currentTarget.style.color = "#6995b1")}
+              onMouseOut={(e) => (e.currentTarget.style.color = "#8d8d8d")}
+            >
+              Outer
+            </li>
+            <li
+              onClick={() => handleTabClick("jackets")}
+              className={`tab ${activeTab === "jackets" ? "active" : ""}`}
+              style={{
+                color: "#8d8d8d",
+                cursor: "pointer",
+                transition: "0.2s all",
+              }}
+              onMouseOver={(e) => (e.currentTarget.style.color = "#6995b1")}
+              onMouseOut={(e) => (e.currentTarget.style.color = "#8d8d8d")}
+            >
+              Jackets
+            </li>
+            <li
+              onClick={() => handleTabClick("accessories")}
+              className={`tab ${activeTab === "accessories" ? "active" : ""}`}
+              style={{
+                color: "#8d8d8d",
+                cursor: "pointer",
+                transition: "0.2s all",
+              }}
+              onMouseOver={(e) => (e.currentTarget.style.color = "#6995b1")}
+              onMouseOut={(e) => (e.currentTarget.style.color = "#8d8d8d")}
+            >
+              Accessories
+            </li>
+          </ul>
+        </div>
+
+        <div className="grid-container tab-content">
+          {renderProductsByCategory(activeTab)}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

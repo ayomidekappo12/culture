@@ -113,7 +113,7 @@ function Footer() {
               </div>
             </div>
           </div>
-          <hr />
+          <hr style={{ border: "1px solid black", fontWeight: "bold" }} />
         </footer>
       </div>
     </>

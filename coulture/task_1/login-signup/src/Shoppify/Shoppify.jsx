@@ -1,5 +1,6 @@
 import React from "react";
 import "./Shoppify.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import model from "../Assets/model.jpg";
 
 function Shoppify() {

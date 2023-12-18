@@ -1,5 +1,9 @@
 /*----- Latest Collection Section
 --------------------------------------------------------------*/
+.product-collection {
+  margin-top: 5em;
+}
+
 .product-collection .collection-item {
   position: relative;
   margin-bottom: 20px;

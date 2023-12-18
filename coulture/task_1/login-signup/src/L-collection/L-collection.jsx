@@ -1,5 +1,6 @@
 import React from "react";
 import "./L-collection.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import collection_item1 from "../Assets/collection-item1.jpg";
 import collection_item2 from "../Assets/collection-item2.jpg";
 import collection_item3 from "../Assets/collection-item3.jpg";
