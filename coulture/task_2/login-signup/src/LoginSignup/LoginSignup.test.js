@@ -12,7 +12,7 @@ describe("LoginSignup Component", () => {
     const wrapper = shallow(<LoginSignup />);
 
     // Ensure the default state is as expected
-    expect(wrapper.state("action")).toBe("Sign Up");
+    expect(wrapper.state().action).toBe("Sign Up");
 
     // Ensure the initial rendered text is correct
     expect(wrapper.find(".text").text()).toBe("Sign Up");
@@ -25,7 +25,7 @@ describe("LoginSignup Component", () => {
     wrapper.find(".submit").at(0).simulate("click");
 
     // Ensure the state is updated correctly
-    expect(wrapper.state("action")).toBe("Sign Up");
+    expect(wrapper.state().action).toBe("Sign Up");
 
     // Ensure the rendered text is updated correctly
     expect(wrapper.find(".text").text()).toBe("Sign Up");
@@ -38,7 +38,7 @@ describe("LoginSignup Component", () => {
     wrapper.find(".submit").at(1).simulate("click");
 
     // Ensure the state is updated correctly
-    expect(wrapper.state("action")).toBe("Login");
+    expect(wrapper.state().action).toBe("Login");
 
     // Ensure the rendered text is updated correctly
     expect(wrapper.find(".text").text()).toBe("Login");

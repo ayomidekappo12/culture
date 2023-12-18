@@ -1,4 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HTMLMinimizerPlugin = require("html-minimizer-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",

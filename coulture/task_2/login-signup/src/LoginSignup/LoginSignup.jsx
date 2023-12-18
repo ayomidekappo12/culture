@@ -1,8 +1,7 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 import "./LoginSignup.css";
-import Email_icon from "../Assets/Email.png";
-import Password_icon from "../Assets/padlock.png";
-import User_icon from "../Assets/person.png";
 
 function LoginSignup() {
   const [action, setAction] = useState("Sign Up");
@@ -10,56 +9,58 @@ function LoginSignup() {
   return (
     <React.Fragment>
       <div className="App-body">
-        <div className="header">
-          <div className="text">{action}</div>
-          <div className="underline"></div>
-        </div>
-        <div className="inputs">
-          {action === "Login" ? (
+        <div className="container">
+          <div className="header">
+            <div className="text">{action}</div>
+            <div className="underline"></div>
+          </div>
+          <div className="inputs">
+            {action === "Login" ? (
+              <div></div>
+            ) : (
+              <div className="input">
+                <label htmlFor="name" />
+                <FontAwesomeIcon icon={faUser} />
+                <input type="text" id="name" placeholder="Name" />
+              </div>
+            )}
+
+            <div className="input">
+              <label htmlFor="email" />
+              <FontAwesomeIcon icon={faEnvelope} />
+              <input type="email" id="email" placeholder="Email Id" />
+            </div>
+            <div className="input">
+              <label htmlFor="password" />
+              <FontAwesomeIcon icon={faLock} />
+              <input type="password" id="password" placeholder="Password" />
+            </div>
+          </div>
+          {action === "Sign Up" ? (
             <div></div>
           ) : (
-            <div className="input">
-              <label htmlFor="name">Name</label>
-              <img src={User_icon} alt="User icon" />
-              <input type="text" id="name" placeholder="Name" />
+            <div className="forgot-password">
+              Lost Password? <span>Click Here!</span>
             </div>
           )}
 
-          <div className="input">
-            <label htmlFor="email">Email</label>
-            <img src={Email_icon} alt="Email icon" />
-            <input type="email" id="email" placeholder="Email Id" />
-          </div>
-          <div className="input">
-            <label htmlFor="password">Password</label>
-            <img src={Password_icon} alt="Password icon" />
-            <input type="password" id="password" placeholder="Password" />
-          </div>
-        </div>
-        {action === "Sign Up" ? (
-          <div></div>
-        ) : (
-          <div className="forgot-password">
-            Lost Password? <span>Click Here!</span>
-          </div>
-        )}
-
-        <div className="submit-container">
-          <div
-            className={action === "Login" ? "submit gray" : "submit"}
-            onClick={() => {
-              setAction("Sign Up");
-            }}
-          >
-            Sign Up
-          </div>
-          <div
-            className={action === "Sign Up" ? "submit gray" : "submit"}
-            onClick={() => {
-              setAction("Login");
-            }}
-          >
-            Login
+          <div className="submit-container">
+            <div
+              className={action === "Login" ? "submit gray" : "submit"}
+              onClick={() => {
+                setAction("Sign Up");
+              }}
+            >
+              Sign Up
+            </div>
+            <div
+              className={action === "Sign Up" ? "submit gray" : "submit"}
+              onClick={() => {
+                setAction("Login");
+              }}
+            >
+              Login
+            </div>
           </div>
         </div>
       </div>
