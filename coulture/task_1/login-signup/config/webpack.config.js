@@ -1,14 +1,11 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const HTMLMinimizerPlugin = require("html-minimizer-webpack-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
   output: {
     filename: "bundle.js",
   },
-  mode: "production",
+  mode: "development",
   module: {
     rules: [
       {
@@ -48,12 +45,7 @@ module.exports = {
       },
     ],
   },
-  optimization: {
-    minimizer: [new HTMLMinimizerPlugin(), new CssMinimizerPlugin()],
-    splitChunks: {
-      chunks: "all",
-    },
-  },
+
   resolve: {
     extensions: ["*", ".js", ".jsx"],
   },
@@ -62,11 +54,10 @@ module.exports = {
     compress: true,
     open: true,
     hot: true,
-    port: 8080,
+    port: 8564,
   },
   devtool: "inline-source-map",
   plugins: [
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       filename: "index.html",
       inject: true,
