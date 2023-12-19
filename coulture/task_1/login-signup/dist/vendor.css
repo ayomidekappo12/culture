@@ -708,7 +708,6 @@
   display: block;
   margin: 0;
   padding: 0;
-  vertical-align: middle;
 }
 .stellarnav li a {
   padding: 15px;
@@ -1424,7 +1423,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
   }
 }
 .swiper-virtual .swiper-slide {
-  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   transform: translateZ(0);
 }
 .swiper-virtual.swiper-css-mode .swiper-wrapper::after {
@@ -1689,7 +1688,6 @@ button.swiper-pagination-bullet {
 .swiper-scrollbar {
   border-radius: var(--swiper-scrollbar-border-radius, 10px);
   position: relative;
-  -ms-touch-action: none;
   background: var(--swiper-scrollbar-bg-color, rgba(0, 0, 0, 0.1));
 }
 .swiper-scrollbar-disabled > .swiper-scrollbar,
@@ -1896,7 +1894,7 @@ swiper-container .swiper-notification {
   left: 0;
   z-index: 9999;
   overflow: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 #cboxWrapper {
   max-width: none;
