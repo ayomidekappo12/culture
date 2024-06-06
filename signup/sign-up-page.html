@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="sign-up-page.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="login-box">
+        <div class="login-header">
+          <h1>Login</h1>
+          <p>Join a community of professionals supporting professionals</p>
+        </div>
+
+        <div class="social-login-buttons">
+          <button id="google-login" class="social-button">
+            <img src="/images/google.svg" alt="Google" class="icon" />
+            <span>Google</span>
+          </button>
+          <button id="linkedin-login" class="social-button">
+            <img src="/images/linkedin.svg" alt="LinkedIn" class="icon" />
+            <span>LinkedIn</span>
+          </button>
+          <button id="facebook-login" class="social-button">
+            <img src="/images/facebook.svg" alt="Facebook" class="icon" />
+            <span>Facebook</span>
+          </button>
+        </div>
+
+        <p class="continue-email">Or continue with email</p>
+
+        <form id="login-form">
+          <div class="form-field">
+            <input
+              type="email"
+              id="email"
+              placeholder="mohammed.wong@email.com"
+            />
+            <span class="form-message" id="email-error"></span>
+          </div>
+          <div class="form-field">
+            <input type="password" id="password" placeholder="Password" />
+            <span class="form-message" id="password-error"></span>
+          </div>
+          <div class="forgot-password">
+            <a href="/auth/reset-password">Forgot password? Reset</a>
+          </div>
+          <button type="submit" id="submit-button" class="primary-button">
+            Continue
+          </button>
+        </form>
+
+        <div class="signup-link">
+          <p>Don't have an account? <a href="/auth/sign-up">Sign up</a></p>
+        </div>
+      </div>
+    </div>
+    <script src="sign-up-page.js"></script>
+  </body>
+</html>
