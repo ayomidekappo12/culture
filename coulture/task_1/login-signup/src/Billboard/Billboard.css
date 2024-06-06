@@ -1,0 +1,151 @@
+:root {
+  --accent-color: #8d8d8d;
+  --dark-color: #191919;
+  --light-color: #fff;
+  --grey-color: #dbdbdb;
+  --light-grey-color: #fafafa;
+  --primary-color: #6995b1;
+  --light-primary-color: #eef1f3;
+}
+
+/*----- Billboard
+--------------------------------------------------------------*/
+#billboard {
+  position: relative;
+}
+#billboard .button-prev,
+#billboard .button-next {
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding: 12px;
+  height: fit-content;
+  z-index: 2;
+  margin: auto;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  color: #191919;
+}
+#billboard .button-prev {
+  left: 0;
+}
+#billboard .button-next {
+  right: 0;
+}
+#billboard .button-prev:hover,
+#billboard .button-next:hover {
+  color: var(--light-color);
+  background-color: var(--primary-color);
+}
+#billboard .image-holder img.banner-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+.main-swiper .banner-content {
+  position: absolute;
+  top: 145px;
+  z-index: 5;
+  width: 100%;
+}
+.banner-content h2.banner-title {
+  font-size: 7.1em;
+  font-weight: 800;
+  line-height: 1em;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+  color: var(--dark-color);
+}
+.banner-content p {
+  margin: 35px 0 60px;
+}
+.main-swiper .swiper-slide {
+  height: 90vh;
+  min-height: 700px;
+}
+.main-swiper .container {
+  max-width: 1400px;
+}
+@media screen and (max-width: 1400px) {
+  .banner-content h2.banner-title {
+    font-size: 5.2em;
+  }
+}
+@media screen and (max-width: 1099px) {
+  .banner-content h2.banner-title {
+    font-size: 4.9em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner-content h2.banner-title {
+    font-size: 4.5em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .banner-content h2.banner-title {
+    font-size: 3.1em;
+  }
+}
+
+/** Billboard
+--------------------------------------------------------------*/
+#billboard .two-column-swiper {
+  position: relative;
+}
+#billboard .two-column-swiper .banner-content h1.element-title {
+  font-size: 3.7em;
+  font-weight: 100;
+}
+#billboard .two-column-swiper .banner-item {
+  display: flex;
+  align-items: center;
+}
+#billboard .two-column-swiper .banner-content {
+  text-align: center;
+}
+#billboard .two-column-swiper .banner-content p {
+  width: 80%;
+  margin: 0 auto 30px;
+}
+#billboard .two-column-swiper .banner-content .btn-wrap {
+  margin: auto;
+}
+#billboard .two-column-swiper .swiper-slide {
+  opacity: 0;
+  transition: ease-in-out;
+  transition-duration: 0.9s;
+}
+#billboard .two-column-swiper .swiper-slide.swiper-slide-active {
+  opacity: 1;
+}
+#billboard .two-column-swiper-slider {
+  margin-top: 30px;
+}
+#billboard .two-column-swiper .button-prev,
+#billboard .two-column-swiper .button-next {
+  position: unset;
+  font-size: 24px;
+  padding: 20px;
+  height: fit-content;
+  background: rgba(255, 255, 255, 0.4);
+  color: #191919;
+  margin: 0;
+  border: 2px solid var(--dark-color);
+}
+#billboard .two-column-swiper .button-prev:hover,
+#billboard .two-column-swiper .button-next:hover {
+  color: var(--light-color);
+  background-color: var(--dark-color);
+  border: 2px solid var(--dark-color);
+}
+#billboard .two-column-swiper .button-prev {
+  margin-right: 10px;
+}
+@media screen and (max-width: 991px) {
+  #billboard .two-column-swiper .banner-item {
+    display: block;
+  }
+}

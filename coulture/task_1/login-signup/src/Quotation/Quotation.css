@@ -1,0 +1,19 @@
+/*----- Quotation Section
+--------------------------------------------------------------*/
+#quotation {
+  margin: 80px;
+}
+
+#quotation blockquote {
+  width: 50%;
+  margin: 0 auto;
+  padding: 0;
+}
+#quotation q {
+  display: block;
+  padding: 50px 0;
+}
+#quotation .author-name {
+  font-size: 0.7em;
+  font-weight: 600;
+}

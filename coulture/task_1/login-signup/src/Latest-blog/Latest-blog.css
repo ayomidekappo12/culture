@@ -1,0 +1,87 @@
+/* Theme Colors */
+:root {
+  --accent-color: #8d8d8d;
+  --dark-color: #191919;
+  --light-color: #fff;
+  --grey-color: #dbdbdb;
+  --light-grey-color: #fafafa;
+  --primary-color: #6995b1;
+  --light-primary-color: #eef1f3;
+}
+
+/* Fonts */
+:root {
+  --body-font: "Inter", sans-serif;
+  --heading-font: "Inter", sans-serif;
+}
+
+/*----- Latest Blog Section
+--------------------------------------------------------------*/
+#latest-blog {
+  margin: 100px;
+}
+
+#latest-blog .section-title {
+  font-weight: 800;
+  font-size: 50px;
+}
+
+#latest-blog article.post-item,
+#latest-blog .image-holder {
+  margin-bottom: 30px;
+}
+#latest-blog .image-holder {
+  border-radius: 4px;
+}
+#latest-blog .meta-date {
+  padding-bottom: 20px;
+  margin-right: 30px;
+  color: var(--dark-grey-color);
+}
+#latest-blog .meta-date .meta-day {
+  font-size: 4em;
+  line-height: 1;
+  font-weight: 200;
+}
+#latest-blog .meta-date .meta-month {
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--dark-grey-color);
+}
+#latest-blog h3.post-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin: 0;
+}
+a.blog-categories {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+a.blog-categories:hover {
+  color: var(--primary-color);
+}
+@media screen and (max-width: 1599px) {
+  #latest-blog .meta-date {
+    margin-right: 15px;
+  }
+  #latest-blog .meta-date .meta-day {
+    font-size: 2.4em;
+  }
+  #latest-blog h3.post-title {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #latest-blog .meta-date .meta-day {
+    font-size: 3em;
+  }
+  #latest-blog h3.post-title {
+    font-size: 1.5em;
+  }
+}

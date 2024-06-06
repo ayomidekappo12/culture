@@ -1,0 +1,45 @@
+/* Theme Colors */
+:root {
+  --accent-color: #8d8d8d;
+  --dark-color: #191919;
+  --light-color: #fff;
+  --grey-color: #dbdbdb;
+  --light-grey-color: #fafafa;
+  --primary-color: #6995b1;
+  --light-primary-color: #eef1f3;
+}
+
+/* Fonts */
+:root {
+  --body-font: "Inter", sans-serif;
+  --heading-font: "Inter", sans-serif;
+}
+
+/*----- Instagram Section
+--------------------------------------------------------------*/
+#instagram p {
+  font-size: 1.1em;
+}
+#instagram figure {
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+}
+#instagram figure i.icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: var(--light-color);
+  opacity: 0;
+  transition: 0.8s all;
+}
+#instagram figure:hover i.icon {
+  opacity: 1;
+}

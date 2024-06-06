@@ -1,0 +1,58 @@
+:root {
+  --accent-color: #8d8d8d;
+  --dark-color: #191919;
+  --light-color: #fff;
+  --grey-color: #dbdbdb;
+  --light-grey-color: #fafafa;
+  --primary-color: #6995b1;
+  --light-primary-color: #eef1f3;
+}
+
+/* Fonts */
+:root {
+  --body-font: "Inter", sans-serif;
+  --heading-font: "Inter", sans-serif;
+}
+
+/*----- Testimonials Section
+--------------------------------------------------------------*/
+#testimonials .container {
+  max-width: 1400px;
+  display: flex;
+}
+#testimonials .reviews-content {
+  position: relative;
+  margin-top: 100px;
+}
+.review-icon i.icon.icon-right-quote {
+  font-size: 9em;
+  color: var(--grey-color);
+}
+#testimonials .testimonial-detail {
+  padding-left: 20px;
+}
+#testimonials .testimonial-detail p {
+  font-size: 1.3em;
+  color: var(--dark-color);
+}
+.testimonial-detail .author-detail .name {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+#testimonials .swiper-arrows {
+  position: absolute;
+  left: 0;
+}
+.swiper-arrows button {
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--dark-grey-color);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 10px;
+  left: 23px;
+}
+.swiper-arrows i.icon:hover {
+  color: var(--primary-color);
+}

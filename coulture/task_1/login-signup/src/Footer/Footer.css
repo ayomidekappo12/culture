@@ -1,0 +1,41 @@
+/* Theme Colors */
+:root {
+  --accent-color: #8d8d8d;
+  --dark-color: #191919;
+  --light-color: #fff;
+  --grey-color: #dbdbdb;
+  --light-grey-color: #fafafa;
+  --primary-color: #6995b1;
+  --light-primary-color: #eef1f3;
+}
+
+/* Fonts */
+:root {
+  --body-font: "Inter", sans-serif;
+  --heading-font: "Inter", sans-serif;
+}
+
+/*----- Footer Section
+--------------------------------------------------------------*/
+#footer .widget-title {
+  font-weight: 800;
+  font-size: large;
+}
+
+#footer .footer-menu {
+  margin-right: 50px;
+}
+.footer-menu ul.menu-list a {
+  color: var(--accent-color);
+}
+.footer-menu ul.menu-list a:hover {
+  color: var(--primary-color);
+}
+.footer-menu a.email {
+  color: var(--accent-color);
+  text-decoration: underline;
+  font-weight: 600;
+}
+.social-links li {
+  padding-right: 20px;
+}

@@ -1,0 +1,18 @@
+/*----- Footer Bottom Section
+--------------------------------------------------------------*/
+#footer-bottom {
+  margin-bottom: 20px;
+}
+#footer-bottom p {
+  margin-bottom: 0;
+}
+.payment-method {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+.payment-method img {
+  object-fit: contain;
+  height: fit-content;
+}

@@ -1,0 +1,75 @@
+* Theme Colors */ :root {
+  --accent-color: #8d8d8d;
+  --dark-color: #191919;
+  --light-color: #fff;
+  --grey-color: #dbdbdb;
+  --light-grey-color: #fafafa;
+  --primary-color: #6995b1;
+  --light-primary-color: #eef1f3;
+}
+
+/* Fonts */
+:root {
+  --body-font: "Inter", sans-serif;
+  --heading-font: "Inter", sans-serif;
+}
+
+/*----- Best selling products Section --------------------------------------------------------------*/
+#selling-products .section-title {
+  padding: 10px; /* Adjust as needed */
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+#selling-products .tabs.list-unstyled {
+  padding: 10px; /* Adjust as needed */
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+[data-tab-content] {
+  opacity: 0;
+  visibility: hidden;
+  display: grid;
+  transition: cubic-bezier(0.22, 0.78, 0.71, 1.01);
+  transition-duration: 0.8s;
+}
+
+#selling-products .tab-content .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 40px;
+}
+
+[data-tab-content].active {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
+
+#selling-products .tabs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+#selling-products .tabs .tab {
+  font-weight: 500;
+  color: var(--dark-grey-color);
+  margin-right: 50px;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+#selling-products .section-title,
+#selling-products .tabs.list-unstyled,
+#selling-products .tabs .tab.active,
+#selling-products .tabs .tab:hover {
+  color: var(--primary-color);
+}
+
+@media screen and (max-width: 991px) {
+  #selling-products .tabs {
+    flex-wrap: unset;
+    overflow-x: scroll;
+  }
+}
