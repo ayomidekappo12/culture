@@ -2,36 +2,49 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Ensure the webpage is properly displayed on different devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title of the webpage -->
     <title>Login Form</title>
+    <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="login-page.css" />
   </head>
   <body>
+    <!-- Main container for the login form -->
     <div class="container">
+      <!-- Box containing the login form and related elements -->
       <div class="login-box">
+        <!-- Header section with title and description -->
         <div class="login-header">
           <h1>Login</h1>
           <p>Join a community of professionals supporting professionals</p>
         </div>
 
+        <!-- Buttons for social login options -->
         <div class="social-login-buttons">
+          <!-- Google login button -->
           <button id="google-login" class="social-button">
             <img src="image/google.png" alt="Google" class="icon" />
             <span>Google</span>
           </button>
+          <!-- LinkedIn login button -->
           <button id="linkedin-login" class="social-button">
             <img src="image/linkedin.png" alt="LinkedIn" class="icon" />
             <span>LinkedIn</span>
           </button>
+          <!-- Facebook login button -->
           <button id="facebook-login" class="social-button">
             <img src="image/facebook.svg" alt="Facebook" class="icon" />
             <span>Facebook</span>
           </button>
         </div>
 
+        <!-- Separator text -->
         <p class="continue-email">Or continue with email</p>
 
+        <!-- Form for email and password login -->
         <form id="login-form">
+          <!-- Email input field with error message -->
           <div class="form-field">
             <input
               type="email"
@@ -40,23 +53,28 @@
             />
             <span class="form-message" id="email-error"></span>
           </div>
+          <!-- Password input field with error message -->
           <div class="form-field">
             <input type="password" id="password" placeholder="Password" />
             <span class="form-message" id="password-error"></span>
           </div>
+          <!-- Forgot password link -->
           <div class="forgot-password">
             <a href="/auth/reset-password">Forgot password? Reset</a>
           </div>
+          <!-- Submit button -->
           <button type="submit" id="submit-button" class="primary-button">
             Continue
           </button>
         </form>
 
+        <!-- Signup link -->
         <div class="signup-link">
           <p>Don't have an account? <a href="/auth/sign-up">Sign up</a></p>
         </div>
       </div>
     </div>
+    <!-- Link to the external JavaScript file -->
     <script src="login-page.js"></script>
   </body>
 </html>

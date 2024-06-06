@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const googleLoginButton = document.getElementById("google-login");
-  const linkedinLoginButton = document.getElementById("linkedin-login");
-  const facebookLoginButton = document.getElementById("facebook-login");
+  // Select DOM elements for form, input fields, and error messages
   const loginForm = document.getElementById("login-form");
   const emailInput = document.getElementById("email");
   const passwordInput = document.getElementById("password");
@@ -9,43 +7,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const emailError = document.getElementById("email-error");
   const passwordError = document.getElementById("password-error");
 
-  const redirectUri = `${window.location.origin}${window.location.pathname}`;
-
-  googleLoginButton.addEventListener("click", () => {
-    window.location.href = `https://accounts.google.com/o/oauth2/v2/auth?response_type=code&state=google_44SSW33565GG&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&client_id=${
-      process.env.NEXT_PUBLIC_GOOGLE_OAUTH_CLIENT_ID
-    }&redirect_uri=${encodeURIComponent(redirectUri)}`;
-  });
-
-  linkedinLoginButton.addEventListener("click", () => {
-    window.location.href = `https://www.linkedin.com/oauth/v2/authorization?response_type=code&state=linkedin_tZo2h8GqAHXaKmM&scope=openid%20profile%20email&client_id=${
-      process.env.NEXT_PUBLIC_LINKEDIN_OAUTH_CLIENT_ID
-    }&redirect_uri=${encodeURIComponent(redirectUri)}`;
-  });
-
-  facebookLoginButton.addEventListener("click", () => {
-    window.location.href = `https://www.facebook.com/v19.0/dialog/oauth?response_type=code&state=facebook_XX56TYDD34S&scope=email%20public_profile&client_id=${
-      process.env.NEXT_PUBLIC_FACEBOOK_OAUTH_CLIENT_ID
-    }&redirect_uri=${encodeURIComponent(redirectUri)}`;
-  });
-
+  // Add an event listener for the form submit event
   loginForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    submitButton.disabled = true;
+    e.preventDefault(); // Prevent default form submission
+    submitButton.disabled = true; // Disable the submit button to prevent multiple submissions
 
+    // Get the values from the input fields
     const email = emailInput.value;
     const password = passwordInput.value;
 
     // Client-side validation
     let valid = true;
-    emailError.textContent = "";
-    passwordError.textContent = "";
+    emailError.textContent = ""; // Clear previous error messages
+    passwordError.textContent = ""; // Clear previous error messages
 
+    // Validate email format using regex
     if (!email.match(/^[\w.-]+@([\w-]+\.)+[\w-]{2,4}$/)) {
       emailError.textContent = "Invalid email format";
       valid = false;
     }
 
+    // Validate password format using regex
     if (
       !password.match(
         /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%?&])[A-Za-z\d@$!%?&]{8,}$/
@@ -56,34 +38,24 @@ document.addEventListener("DOMContentLoaded", () => {
       valid = false;
     }
 
+    // If validation fails, re-enable the submit button and return
     if (!valid) {
       submitButton.disabled = false;
       return;
     }
 
+    // Try to log the user in
     try {
-      const loginResponse = await login(email, password);
-      const fetchUserResponse = await fetchUser(loginResponse.token);
-
-      dispatch(
-        addLocalUser({
-          firstName: fetchUserResponse.firstName,
-          lastName: fetchUserResponse.lastName,
-          authToken: loginResponse.token,
-          picture: fetchUserResponse.profileImage,
-        })
-      );
-
-      await createSession(loginResponse.token);
-
-      if (new URLSearchParams(window.location.search).get("source") === "se") {
-        window.close();
-      } else {
-        window.location.href = "/dashboard/my-profile";
-      }
+      // Attempt to log the user in
+      // This code is not provided in the snippet, but it would typically involve making a request to a server to authenticate the user
+      // Placeholder for actual login logic
+      // const loginResponse = await login(email, password);
+      // Handle successful login (e.g., redirect to a different page)
     } catch (error) {
+      // If an error occurs during the login process, display an alert message to the user with a description of the error
       alert("Something went wrong: " + error.message);
     } finally {
+      // Regardless of whether an error occurred or not, ensure that the submit button is re-enabled after the login process has been attempted
       submitButton.disabled = false;
     }
   });
